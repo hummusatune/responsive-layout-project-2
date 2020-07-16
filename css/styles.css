@@ -1,0 +1,410 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700|Montserrat:400,700);
+
+/* ======================
+
+Base Styles
+
+======================= */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #333;
+}
+
+body {
+  background: #fafafa;
+  font: 1em/1.5 'Libre Baskerville', serif;
+  color: #333;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======================
+
+Navigation Styles
+
+======================= */
+
+.mainNav {
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  align-items: center;
+  list-style-type: none;
+}
+
+.name {
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  text-transform: none;
+  margin: .7em 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.navList {
+  display: flex;
+  flex-flow: column;
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  padding: 0;
+  margin-top: 0.5em;
+  width: 90%;
+}
+
+.navList a {
+  background-color: #fff;
+  color: #333;
+  display: block;
+  padding: 1em 2.5em;
+  margin: 0.3125em 0;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.navList a:hover {
+  color: #F64740;
+  background-color: #fff;
+  border-color: #F64740;
+}
+
+/* ======================
+
+Header Styles
+
+======================= */
+
+.headerFlex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.headerBio {
+  width: 90%;
+  text-align: center;
+  margin: 1em 0 2.5em;
+  order: 2;
+}
+
+.headerPic {
+  margin: 1.5em 0 1em;
+  width: 75%;
+  order: 1;
+}
+
+/* ======================
+
+Portfolio Styles
+
+======================= */
+
+#portfolio {
+  background: #fff;
+}
+
+#portfolio h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3.5em 0;
+}
+
+/* ======================
+
+Gallery Styles
+
+======================= */
+
+.gallery {
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.galleryItem img {
+  max-width: 90%;
+}
+
+.galleryItem p {
+  width: 90%;
+  margin: auto;
+}
+
+.galleryItem:not(:last-of-type) {
+  margin-bottom: 2.5em;
+}
+
+.galleryItem:last-of-type {
+  margin-bottom: 3.5em;
+}
+
+/* ======================
+
+Contact Styles
+
+======================= */
+
+#contact {
+  background: #fafafa;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 0 2em;
+}
+
+#contact h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3.5em 0 1em 0;
+}
+
+#contact p {
+  width: 90%;
+  text-align: center;
+}
+
+.contactInfo {
+  font-weight: bold;
+}
+
+#contact p:last-of-type {
+  margin: 0 0 2em;
+}
+
+/* ======================
+
+Footer Styles
+
+======================= */
+
+footer {
+  font-size: 1em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 1em 0.5em;
+  border-top: 1px solid #E1E1E1;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footerList {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.backToTop {
+  text-transform: uppercase;
+}
+
+.footerNav {
+  display: none;
+}
+
+/* ======================
+
+Media Queries
+
+======================= */
+
+@media (min-width: 768px) {
+	.wrapper {
+		margin: 0 auto;
+	}
+
+  .mainNav,
+  .navList {
+    display: flex;
+  }
+
+  .navList {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .navList a {
+    background-color: #fafafa;
+    padding: 1em 2.5em;
+  }
+
+  .headerFlex {
+    margin: 2em 0 2.5em 0;
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .headerPic {
+    margin: 0 1em;
+    flex: 1;
+  }
+
+  .headerBio {
+    margin: 0 1em;
+    text-align: left;
+    flex: 2;
+  }
+
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .galleryItem {
+    width: 45%;
+    margin: 0 1em;
+  }
+
+  .galleryItem img {
+    max-width: 100%
+  }
+
+  #contact p {
+    width: 70%;
+    text-align: center;
+  }
+
+  .contactInfo {
+    margin: 0 0 0 1em;
+  }
+
+	footer {
+		width: 93%;
+		max-width: 1045px;
+    display: block;
+		margin: 0 auto;
+	}
+
+  .footerList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 1.5em 0 3em;
+  }
+
+  .footerName {
+    flex: 0 0 60%;
+  }
+
+  .backToTop {
+    display: none;
+  }
+
+  .footerNav {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainNav {
+    width: 95%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navList {
+    justify-content: flex-end;
+  }
+
+  .navList a {
+    background-color: #fafafa;
+    padding: 1em 0 1em 2.5em;
+    border: none;
+  }
+
+  .navList a:hover {
+    color: #F64740;
+    background: #fafafa;
+    border: none;
+  }
+
+  .name {
+    width: 30%;
+  }
+
+  .headerFlex {
+    width: 95%;
+    margin: 1em auto 2em auto;
+  }
+
+  .headerBio {
+    margin: 0 5.5em 0 0;
+    flex: 1;
+  }
+
+  .headerPic {
+    flex: 0;
+    margin: 0 0 0 1em;
+  }
+
+  #portfolio {
+    width: 97%;
+    margin: auto;
+  }
+
+  .gallery {
+    justify-content: center;
+    width: 97%;
+  }
+
+  .galleryItem {
+    width: 30%;
+  }
+
+  #contact p {
+    width: 51%;
+  }
+
+  footer {
+    width: 90%;
+  }
+
+  .footerName {
+    flex: 0 0 70%;
+  }
+
+}
